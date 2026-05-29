@@ -68,19 +68,20 @@ a:focus {
 
 .header-content {
   display: grid;
-  grid-template-columns: 135px 1fr;
+  grid-template-columns: 160px 1fr;
   gap: 2rem;
   align-items: start;
 }
 
 .profile-photo-wrapper {
-  width: 135px;
+  width: 160px;
 }
 
 .profile-photo {
-  width: 135px;
-  height: 135px;
+  width: 160px;
+  height: 180px;
   object-fit: cover;
+  object-position: center top;
   border-radius: 4px;
   border: 1px solid var(--border);
   display: block;
@@ -217,14 +218,14 @@ section {
     gap: 1rem;
   }
 
-  .profile-photo-wrapper,
-  .profile-photo {
-    width: 110px;
-  }
-
-  .profile-photo {
-    height: 110px;
-  }
+   .profile-photo-wrapper,
+   .profile-photo {
+     width: 125px;
+   }
+   
+   .profile-photo {
+     height: 145px;
+   }
 
   .link-list {
     display: block;
