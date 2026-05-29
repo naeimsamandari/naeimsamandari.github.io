@@ -1,0 +1,241 @@
+/* Simple academic website for GitHub Pages.
+   Maintain by editing this file and index.html only. */
+
+:root {
+  --text: #1f2933;
+  --muted: #5f6b7a;
+  --border: #d9dee5;
+  --background: #ffffff;
+  --link: #24527a;
+  --link-hover: #153a59;
+  --max-width: 900px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--background);
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(36, 82, 122, 0.35);
+}
+
+a:hover,
+a:focus {
+  color: var(--link-hover);
+  border-bottom-color: var(--link-hover);
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 1rem;
+  padding: 0.5rem 0.75rem;
+  background: var(--background);
+  border: 1px solid var(--border);
+  z-index: 10;
+}
+
+.skip-link:focus {
+  left: 1rem;
+}
+
+.site-header,
+.site-main,
+.site-footer {
+  width: min(100% - 2rem, var(--max-width));
+  margin: 0 auto;
+}
+
+.site-header {
+  padding: 3rem 0 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.header-content {
+  display: grid;
+  grid-template-columns: 135px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.profile-photo-wrapper {
+  width: 135px;
+}
+
+.profile-photo {
+  width: 135px;
+  height: 135px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  display: block;
+}
+
+.eyebrow {
+  margin: 0 0 0.25rem;
+  font-size: 0.92rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.25;
+  color: var(--text);
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 600;
+}
+
+h2 {
+  margin: 0 0 1rem;
+  padding-top: 0.25rem;
+  font-size: 1.55rem;
+  font-weight: 600;
+}
+
+h3 {
+  margin: 1.8rem 0 0.75rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+h4 {
+  margin: 0 0 0.35rem;
+  font-size: 1.02rem;
+  font-weight: 600;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+.role,
+.fields,
+.visit {
+  margin-bottom: 0.75rem;
+}
+
+.fields,
+.visit,
+.meta,
+.placeholder {
+  color: var(--muted);
+}
+
+.link-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 0.8rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.link-list li {
+  margin: 0;
+}
+
+.link-list li:not(:last-child)::after {
+  content: "·";
+  margin-left: 0.8rem;
+  color: var(--muted);
+}
+
+.site-main {
+  padding: 2.5rem 0 1rem;
+}
+
+section {
+  margin-bottom: 2.75rem;
+}
+
+.research-item {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.research-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.meta {
+  margin-bottom: 0.5rem;
+  font-size: 0.98rem;
+}
+
+.teaching-list {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.teaching-list li {
+  margin-bottom: 0.45rem;
+}
+
+.site-footer {
+  padding: 1.5rem 0 3rem;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 700px) {
+  body {
+    font-size: 16px;
+  }
+
+  .site-header {
+    padding-top: 2rem;
+  }
+
+  .header-content {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .profile-photo-wrapper,
+  .profile-photo {
+    width: 110px;
+  }
+
+  .profile-photo {
+    height: 110px;
+  }
+
+  .link-list {
+    display: block;
+  }
+
+  .link-list li {
+    margin-bottom: 0.35rem;
+  }
+
+  .link-list li:not(:last-child)::after {
+    content: "";
+    margin: 0;
+  }
+}
