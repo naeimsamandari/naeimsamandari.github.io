@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://naeimsamandari.github.io/sitemap.xml
