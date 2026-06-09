@@ -232,9 +232,7 @@ section {
   }
 
   .eyebrow {
-    margin-top: 0.2rem;
-    font-size: 0.78rem;
-    letter-spacing: 0.055em;
+    display:none;
   }
 
   h1 {
